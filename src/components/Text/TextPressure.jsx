@@ -77,6 +77,10 @@ const TextPressure = ({
       containerRef.current.getBoundingClientRect();
 
     let newFontSize = containerW / (chars.length / 2);
+    // Cap font size by container height to prevent vertical cutoff
+    if (newFontSize > containerH) {
+      newFontSize = containerH * 0.9;
+    }
     newFontSize = Math.max(newFontSize, minFontSize);
 
     setFontSize(newFontSize);
@@ -148,7 +152,7 @@ const TextPressure = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full overflow-hidden bg-transparent"
+      className="relative w-full h-full bg-transparent flex items-center"
     >
       <style>{`
         @font-face {
@@ -174,7 +178,7 @@ const TextPressure = ({
 
       <h1
         ref={titleRef}
-        className={`text-pressure-title ${className} ${
+        className={`text-pressure-title w-full ${className} ${
           flex ? "flex justify-between" : ""
         } ${stroke ? "stroke" : ""} uppercase text-center`}
         style={{
@@ -182,7 +186,7 @@ const TextPressure = ({
           fontSize: fontSize,
           lineHeight,
           transform: `scale(1, ${scaleY})`,
-          transformOrigin: "center top",
+          transformOrigin: "center center",
           margin: 0,
           fontWeight: 100,
           color: stroke ? undefined : textColor,

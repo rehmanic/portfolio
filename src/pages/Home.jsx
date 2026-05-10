@@ -34,7 +34,7 @@ export default function Home() {
         className="w-full md:w-[50%] flex flex-col justify-center items-center px-4 md:px-0"
       >
         <div className="w-full md:w-[75%] flex flex-col text-center md:text-left gap-y-4 md:gap-y-6">
-          <div className="relative h-[120px] md:h-[210px]">
+          <div className="relative h-[130px] md:h-[230px]">
             <TextPressure
               text="Abdur"
               flex={true}
@@ -49,7 +49,7 @@ export default function Home() {
               className="md:text-[2.25rem]"
             />
           </div>
-          <div className="relative h-[120px] md:h-[210px]">
+          <div className="relative h-[130px] md:h-[230px]">
             <TextPressure
               text="Rehman"
               flex={true}
