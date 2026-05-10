@@ -96,12 +96,16 @@ export default function Experience() {
 
       {/* Responsive Navigation */}
       {isLaptopOrLarger ? (
-        <Dock
-          items={items}
-          panelHeight={50}
-          baseItemSize={30}
-          magnification={70}
-        />
+        <div className="fixed bottom-0 left-0 w-full flex justify-center z-50 pointer-events-none pb-4">
+          <div className="pointer-events-auto">
+            <Dock
+              items={items}
+              panelHeight={50}
+              baseItemSize={30}
+              magnification={70}
+            />
+          </div>
+        </div>
       ) : (
         <Bottom />
       )}

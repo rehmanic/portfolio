@@ -10,19 +10,21 @@ const projects = [
   {
     title: "Specora",
     description:
-      "An AI assisted requirements engineering platform. All activities of requirements engineering in a single platform with AI features.",
+      "An AI-assisted requirements engineering platform covering requirements elicitation, feasibility analysis, wireframing, specification, management.",
     tech: [
-      {
-        name: "Next.js",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-      },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "React JS", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+      { name: "Next JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "Node JS", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
+      { name: "Express JS", logo: "https://img.icons8.com/color/48/express-js.png" },
+      { name: "FastAPI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
       { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-      { name: "Node.js", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
     ],
     media: "/specora.png",
     links: {
-      live: "https://specora.vercel.app/",
-      github: "https://github.com/Rehman-codes/",
+      live: "#",
+      github: "https://github.com/rehmanic/Specora",
       files: "#",
     },
   },
@@ -40,48 +42,9 @@ const projects = [
     media: "/gradwiz.png",
     links: {
       live: "https://gradwiz.vercel.app",
-      github: "https://github.com/Rehman-codes/GradWiz",
+      github: "https://github.com/rehmanic/GradWiz",
       files:
         "https://drive.google.com/drive/folders/14vIpN4kjbi8hcL9V8kzZJ0nPdOVCbpOV?usp=sharing",
-    },
-  },
-  {
-    title: "Stockar",
-    description:
-      "This is the Manager Service of an Inventory Management System build in collaboration with my fellow engineers as the semester project of Web Engineering.",
-    tech: [
-      {
-        name: "React",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-      },
-      { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
-      { name: "MongoDB", logo: "/mongoDB.svg" },
-    ],
-    media: "/stockar.png",
-    links: {
-      live: "https://stockar.vercel.app/",
-      github: "https://github.com/Rehman-codes/WE-Project",
-      files:
-        "https://drive.google.com/drive/folders/1CS6Z9iIowdxEaxpaQwBruHZrjednIJMg?usp=sharing",
-    },
-  },
-  {
-    title: "Phone Directory",
-    description:
-      "An app that stores and manages phone numbers with names. The goal was to learn the architecture of MERN stack and the communication between FE, BE and DB. I also learned basic deployment on platforms such as Vercel and Render. ",
-    tech: [
-      {
-        name: "React",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-      },
-      { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
-      { name: "MongoDB", logo: "/mongoDB.svg" },
-    ],
-    media: "/phoneDir.png",
-    links: {
-      live: "https://phone-directory-pk.vercel.app/",
-      github: "https://github.com/Rehman-codes/Phone-Directory",
-      files: "#",
     },
   },
 ];
@@ -113,13 +76,16 @@ export default function Projects() {
 
       {/* Responsive Navigation */}
       {isLaptopOrLarger ? (
-        <Dock
-          items={items}
-          panelHeight={50}
-          baseItemSize={30}
-          magnification={70}
-          className="fixed z-50"
-        />
+        <div className="fixed bottom-0 left-0 w-full flex justify-center z-50 pointer-events-none pb-4">
+          <div className="pointer-events-auto">
+            <Dock
+              items={items}
+              panelHeight={50}
+              baseItemSize={30}
+              magnification={70}
+            />
+          </div>
+        </div>
       ) : (
         <Bottom />
       )}

@@ -13,7 +13,7 @@ export const SOCIAL_LINKS = [
     {
         icon: Github,
         label: "GitHub",
-        url: "https://github.com/Rehman-codes",
+        url: "https://github.com/rehmanic",
     },
     {
         icon: Linkedin,

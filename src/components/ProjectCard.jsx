@@ -35,21 +35,27 @@ export default function ProjectCard({ projects }) {
                         <hr className="mt-8 border-white/10" />
 
                         <div className="mt-6 md:mt-8 flex items-center gap-6">
-                            <Tooltip title="Demo">
-                                <a href={project.links.live} target="_blank" rel="noopener noreferrer">
-                                    <Eye className="w-6 h-6 cursor-pointer" />
-                                </a>
-                            </Tooltip>
-                            <Tooltip title="Code">
-                                <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                                    <Github className="w-6 h-6 cursor-pointer" />
-                                </a>
-                            </Tooltip>
-                            <Tooltip title="Docs">
-                                <a href={project.links.files} target="_blank" rel="noopener noreferrer">
-                                    <Files className="w-6 h-6 cursor-pointer" />
-                                </a>
-                            </Tooltip>
+                            {project.links.live && project.links.live !== "#" && (
+                                <Tooltip title="Demo">
+                                    <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                                        <Eye className="w-6 h-6 cursor-pointer" />
+                                    </a>
+                                </Tooltip>
+                            )}
+                            {project.links.github && project.links.github !== "#" && (
+                                <Tooltip title="Code">
+                                    <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                                        <Github className="w-6 h-6 cursor-pointer" />
+                                    </a>
+                                </Tooltip>
+                            )}
+                            {project.links.files && project.links.files !== "#" && (
+                                <Tooltip title="Docs">
+                                    <a href={project.links.files} target="_blank" rel="noopener noreferrer">
+                                        <Files className="w-6 h-6 cursor-pointer" />
+                                    </a>
+                                </Tooltip>
+                            )}
                         </div>
                     </div>
 
