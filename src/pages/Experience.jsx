@@ -26,7 +26,7 @@ export default function Experience() {
   const experiences = [
     {
       title: "Associate Software Engineer",
-      company: "VisionRD, NASTP, NUST, Islamabad",
+      company: "VisionRD, NSTP, NUST, Islamabad",
       year: "2026",
       duration: "26 Mar 2026 – 08 May 2026",
       logo: "/vrd.jpeg",
@@ -37,7 +37,7 @@ export default function Experience() {
     },
     {
       title: "Web Development Intern",
-      company: "Bookme, NASTP Lahore",
+      company: "Bookme, NASTP, Lahore",
       year: "2025",
       duration: "19 Jun 2025 – 15 Aug 2025",
       logo: "/bookme_logo.png",
